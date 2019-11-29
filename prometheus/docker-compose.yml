@@ -48,5 +48,5 @@ services:
 #    ports:
 #      - 9104:9104
 #    environment:
-#      - DATA_SOURCE_NAME=root:baokangys1234!@(152.136.176.11:3336)/
+#      - DATA_SOURCE_NAME=root:password(0.0.0.0:3306)/
 #    restart: 'always'
