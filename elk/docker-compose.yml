@@ -1,0 +1,16 @@
+version: '3'
+services:
+  elk:
+    image: sebp/elk:670
+    container_name: elk
+    ports:
+      - "5601:5601"
+      #- "9200:9200"
+      - "5044:5044"
+    environment:
+      - ES_JAVA_OPTS=-Xms2g -Xmx2g
+      - ES_HEAP_SIZE=2g
+      - LS_HEAP_SIZE=1g
+    volumes:
+      - ../docker/elk:/var/lib/elasticsearch
+      - ./logstash/conf.d:/etc/logstash/conf.d

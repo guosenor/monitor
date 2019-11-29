@@ -1,0 +1,4 @@
+docker/elk/*
+docker/filebeat/*
+dokcer/prometheus/*
+docker/grafana/*

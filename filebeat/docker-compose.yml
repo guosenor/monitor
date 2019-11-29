@@ -1,0 +1,10 @@
+version: '3'
+services:
+  filebeat:
+    image: prima/filebeat:6
+    container_name: filebeat
+    #restart: always
+    volumes:
+      - ./config/filebeat.yml:/filebeat.yml
+      - ../docker/filebeat:/data
+      - /home/bkys-backend/log:/home/bkys-backend/log
