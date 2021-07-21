@@ -7,4 +7,4 @@ services:
     volumes:
       - ./config/filebeat.yml:/filebeat.yml
       - ../docker/filebeat:/data
-      - /home/bkys-backend/log:/home/bkys-backend/log
+      - /home/log:/home/log
