@@ -3,7 +3,7 @@ filebeat.prospectors:
   enabled: true
   tags: ["node-server"]
   paths:
-    - /home/bkys-backend/log/*.log #需要读取日志的目录#
+    - /home/log/*.log #需要读取日志的目录#
   #json.keys_under_root: true # 因为docker使用的log driver是json-file，因此采集到的日志格式是json格式，设置为true之后，filebeat会将日志进行json_decode处理
   #json.add_error_key: true #如果启用此设置，则在出现JSON解组错误或配置中定义了message_key但无法使用的情况下，Filebeat将添加“error.message”和“error.type：json”键。
   #json.message_key: log #一个可选的配置设置，用于指定应用行筛选和多行设置的JSON密钥。 如果指定，键必须位于JSON对象的顶层，且与键关联的值必须是字符串，否则不会发生过滤或多行聚合。
